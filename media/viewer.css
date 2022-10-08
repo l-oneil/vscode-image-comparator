@@ -13,7 +13,7 @@ img{
 }
 
 .image-viewer {
-    height: 1000px;
+    height: calc(100vh - 50px);
     width: 100%;
     display: flex;
     min-height: 0;

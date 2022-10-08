@@ -8,11 +8,8 @@ Once the window is open, right click on image files (`.png`/`.jpg`/`.jpeg`) in t
 
 You can add as many images as you want, closing the comparator window will reset the image list. 
 
-## Running the example
+## Running the Project
 - Open in VS Code 1.47+
 - `npm install`
 - `npm run watch` or `npm run compile`
 - `F5` to start debugging
-
-## TODO List
-- Automatically scale imageViewer size to display scale
