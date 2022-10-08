@@ -15,6 +15,6 @@ You can add as many images as you want, closing the comparator window will reset
 - `F5` to start debugging
 
 ## Credits
-- [Jan Novak <novakj4@gmail.com> and Benedikt Bitterli <benedikt.bitterli@gmail.com> - `viewer.js`]
+- [Jan Novak](<novakj4@gmail.com>) and [Benedikt Bitterli](<benedikt.bitterli@gmail.com>) - `viewer.js`
 - [Jack Moore - wheelzoom](http://www.jacklmoore.com/wheelzoom)
 - [Search icons created by Freepik - Flaticon<](https://www.flaticon.com/free-icons/search)
