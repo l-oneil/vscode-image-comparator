@@ -56,6 +56,7 @@ export class ImageViewer {
         // Otherwise, create a new panel.
         const panel = vscode.window.createWebviewPanel('Image Comparator', 'Image Comparator', column || vscode.ViewColumn.One, getWebviewOptions(extensionUri));
         ImageViewer.currentPanel = new ImageViewer(panel, extensionUri);
+        panel.iconPath = vscode.Uri.joinPath(extensionUri, 'icon.png');
     }
 
     static revive(panel: vscode.WebviewPanel, extensionUri: vscode.Uri) {
