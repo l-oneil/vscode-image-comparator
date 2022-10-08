@@ -1,0 +1,126 @@
+
+body {
+	padding: var(--container-padding);
+	color: var(--vscode-foreground);
+	font-size: var(--vscode-font-size);
+	font-weight: var(--vscode-font-weight);
+	font-family: var(--vscode-font-family);
+	background-color: var(--vscode-editor-background);
+}
+
+img{
+    border: 0px solid black;
+}
+
+.image-viewer {
+    height: 1000px;
+    width: 100%;
+    display: flex;
+    min-height: 0;
+    flex-direction: column;
+    background-color: var(--vscode-editor-background); /*rgb(51, 51, 51);*/
+}
+
+.image-viewer.fullscreen {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    min-height: 0;
+}
+
+.plot-container {
+    width: 100%;
+    height: 100%;
+}
+
+.plot-frame{
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+img.inset {
+    border: 0px solid #000;
+    background-color: var(--vscode-editor-background);/*#222;*/
+    margin: 0px;
+    padding: 0px;
+}
+
+.image-viewer img {
+    image-rendering:optimizeSpeed;             /* Legal fallback */
+    image-rendering:-moz-crisp-edges;          /* Firefox        */
+    image-rendering:-o-crisp-edges;            /* Opera          */
+    image-rendering:-webkit-optimize-contrast; /* Safari         */
+    image-rendering:optimize-contrast;         /* CSS3 Proposed  */
+    image-rendering:pixelated;                 /* CSS4 Proposed  */
+    -ms-interpolation-mode:nearest-neighbor;   /* IE8+           */
+}
+
+.image-viewer-insets {
+    flex-grow: 0;
+    display: flex;
+    min-height: 0;
+    flex-direction: row;
+    border: 0px solid #000;
+    border-spacing: 0;
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--vscode-editor-background);
+    justify-content: center;
+}
+
+.image-viewer-inset {
+    height: 162px;
+    width: 140px;
+    padding: 2px;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    min-height: 0;
+    flex-direction: column;
+}
+
+.image-viewer-tree-group {
+    display: flex;
+    min-height: 0;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.image-viewer-inset-caption {
+    flex-grow: 0;
+    height: 20px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #aaa;
+}
+
+.image-viewer-inset img {
+    height: 100%;
+    width: 100%;
+}
+
+.image-viewer-selector {
+    padding: 6px 10px;
+    font-weight: normal;
+    line-height: 1.2;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.image-viewer-selector-primary {
+    color: var(--vscode-foreground);
+    background-color: var(--vscode-editor-background);
+}
+
+.image-viewer-selector-primary.active {
+    color: var(--vscode-editor-background);
+    background-color: var(--vscode-foreground);
+}
+
+.image-viewer-selector-group {
+    padding: 0px;
+    background-color: var(--vscode-editor-background);
+    flex-grow: 0;
+}

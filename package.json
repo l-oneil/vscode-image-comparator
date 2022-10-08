@@ -1,0 +1,53 @@
+{
+	"name": "image-comparison-tool",
+	"displayName": "image-comparison-tool",
+	"description": "An extension for subjectively evaluating image differences.",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.47.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+        "onCommand:image-comparison-tool.openViewer",
+        "onCommand:image-comparison-tool.addImage"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "image-comparison-tool.openViewer",
+				"title": "Image Comparator: Open Window"
+			},
+			{
+				"command": "image-comparison-tool.addImage",
+				"title": "Image Comparator: Add Image"
+			}
+		],
+		"menus": {
+			"explorer/context": [
+				{
+					"when": "!explorerResourceIsFolder && resourceExtname == .png || resourceExtname == .jpg || resourceExtname == .jpeg",
+					"command": "image-comparison-tool.addImage",
+					"group": "3_compare"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"lint": "eslint . --ext .ts,.tsx",
+		"watch": "tsc -w -p ./"
+	},
+	"devDependencies": {
+		"@types/node": "^16.11.7",
+		"@types/vscode": "^1.47.0",
+		"@types/vscode-webview": "^1.57.0",
+		"@typescript-eslint/eslint-plugin": "^5.30.0",
+		"@typescript-eslint/parser": "^5.30.0",
+		"eslint": "^8.13.0",
+		"typescript": "^4.7.2"
+	}
+}
