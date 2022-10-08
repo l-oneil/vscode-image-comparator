@@ -14,5 +14,5 @@ You can add as many images as you want, closing the comparator window will reset
 - `npm run watch` or `npm run compile`
 - `F5` to start debugging
 
-# TODO List
+## TODO List
 - Automatically scale imageViewer size to display scale
