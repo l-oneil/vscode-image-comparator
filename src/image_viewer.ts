@@ -104,7 +104,7 @@ export class ImageViewer {
         const stylesViewerUri = webview.asWebviewUri(stylesViewerPath);
         
         // Create Image Box Object
-        let imageBoxObj = [
+        const imageBoxObj = [
             {
                 "elements" : new Array<any>,
                 "title" : "Image Comparator",
@@ -120,7 +120,6 @@ export class ImageViewer {
                     "image": webview.asWebviewUri(vscode.Uri.file(image)).toString(),
             });
         });
-        console.log("Image Box: \n" + JSON.stringify(imageBoxObj));
 
         // Use a nonce to only allow specific scripts to be run
         const nonce = getNonce();
