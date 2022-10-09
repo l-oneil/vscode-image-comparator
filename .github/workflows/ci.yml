@@ -10,9 +10,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install
-         run: npm install
-         run: npm install -g eslint
+        run: npm install
+        run: npm install -g eslint
       - name: Compile
-         run: npm run compile
+        run: npm run compile
       - name: Lint
-         run: eslint . --ext .ts,.tsx
+        run: eslint . --ext .ts,.tsx
