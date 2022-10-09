@@ -1,0 +1,31 @@
+name: Publish
+on:
+  push:
+    tags:
+      - '*'
+jobs:
+  build:
+    name: Publish binaries
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
+      with:
+        node-version: 14
+        registry-url: https://registry.npmjs.org/
+    - name: Install the dependencies
+      run: npm install
+    - name: Install VSCE
+      run: npm i -g vsce
+    - name: Package
+      run: vsce package
+    - name: Publish to VSCode Marketplace
+      run: vsce publish -p ${{ secrets.VSCE_PAT }}
+    - name: Upload binaries to release
+      uses: svenstaro/upload-release-action@v2
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        file: image-comparator-*.vsix
+        tag: ${{ github.ref }}
+        overwrite: true
+        file_glob: true
