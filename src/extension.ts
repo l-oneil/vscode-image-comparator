@@ -15,9 +15,9 @@ export function activate(context: vscode.ExtensionContext) {
 			ImageViewer.registerImage(uri.fsPath);
 		}
 		else {
-			// Search Dialog to Add x1 Image to Comparator
+			// Search Dialog to Add N Image(s) to Comparator
 			const options: vscode.OpenDialogOptions = {
-				canSelectMany: false,
+				canSelectMany: true,
 				openLabel: 'Open',
 				filters: {
 					'Images': ['png', 'jpg', 'jpeg'],
@@ -25,8 +25,10 @@ export function activate(context: vscode.ExtensionContext) {
 			};
 			vscode.window.showOpenDialog(options).then(fileUri => {
 				if (fileUri && fileUri[0]) {
-					// Add Image to Comparator
-					ImageViewer.registerImage(fileUri[0].fsPath);
+					// Loop through and add each Image to Comparator
+					fileUri.forEach( (fileUri_obj) => {
+						ImageViewer.registerImage(fileUri_obj.fsPath);
+					});
 				}
 			});
 		}
