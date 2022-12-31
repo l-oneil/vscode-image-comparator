@@ -23,7 +23,7 @@ export function activate(context: vscode.ExtensionContext) {
 				canSelectMany: true,
 				openLabel: 'Open',
 				filters: {
-					'Images': ['png', 'jpg', 'jpeg'],
+					'Images': ['png', 'jpg', 'jpeg', 'PNG', 'JPG', 'JPEG'],
 				}
 			};
 
