@@ -2,7 +2,7 @@
 	"name": "image-comparator",
 	"displayName": "Image Comparator",
 	"description": "An extension for subjectively evaluating image differences.",
-	"version": "0.0.8",
+	"version": "0.0.9",
 	"publisher": "l-oneil",
 	"icon": "icon.png",
 	"author": {
